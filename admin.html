@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">🧙</span>
+          <span>Questline RPG</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="player.html">Player View</a>
+        </nav>
+      </header>
+
+      <main class="admin-layout">
+        <section class="panel form-panel">
+          <div class="panel-header">
+            <h2>Mission Editor</h2>
+            <p>Create or update a mission.</p>
+          </div>
+
+          <form id="mission-form">
+            <input type="hidden" id="mission-id" />
+
+            <label>
+              Mission Title
+              <input
+                id="mission-title"
+                type="text"
+                placeholder="The Cipher of the Whispering Tower"
+                required
+              />
+            </label>
+
+            <label>
+              Type
+              <select id="mission-type">
+                <option value="logic">Logic</option>
+                <option value="code">Code-breaking</option>
+                <option value="riddle">Riddle</option>
+                <option value="story">Story</option>
+              </select>
+            </label>
+
+            <label>
+              Difficulty
+              <select id="mission-difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="boss">Boss</option>
+              </select>
+            </label>
+
+            <label>
+              Story Description
+              <textarea
+                id="mission-description"
+                rows="4"
+                placeholder="An old chapel door locks with a clue hidden in the moonlit script..."
+                required
+              ></textarea>
+            </label>
+
+            <label>
+              Puzzle / Clue
+              <textarea
+                id="mission-clue"
+                rows="4"
+                placeholder="Write the actual clue or puzzle here..."
+                required
+              ></textarea>
+            </label>
+
+            <label>
+              Correct Answer
+              <input id="mission-answer" type="text" placeholder="moon" required />
+            </label>
+
+            <div class="form-actions">
+              <button class="button primary" type="submit">Save Mission</button>
+              <button id="reset-form" class="button secondary" type="button">
+                Clear
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel list-panel">
+          <div class="panel-header">
+            <h2>Campaign Missions</h2>
+            <p>Manage your quest list.</p>
+          </div>
+          <div id="mission-list" class="mission-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
