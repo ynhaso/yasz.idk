@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Quest Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">🎲</span>
+          <span>Questline RPG</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+      </header>
+
+      <main class="player-layout">
+        <section class="panel player-panel">
+          <div class="panel-header">
+            <h2>Adventure Log</h2>
+            <p>Choose your name and complete the missions.</p>
+          </div>
+
+          <div class="player-inputs">
+            <label>
+              Player Name
+              <input id="player-name" type="text" placeholder="e.g. Aria the Ranger" />
+            </label>
+            <button id="save-player-name" class="button primary" type="button">
+              Save Name
+            </button>
+          </div>
+
+          <div id="mission-board" class="mission-board"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
